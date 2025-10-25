@@ -1,0 +1,37 @@
+{:location
+ {:city "San Rafael"
+  :state "CA"
+  :country "USA"
+  :timezone "America/Los_Angeles"
+  :timezone-abbr "PST/PDT"
+  
+  ;; San Rafael, CA coordinates
+  :latitude 37.9735
+  :longitude -122.5311
+  
+  ;; Lahiri ayanamsa (most widely used for Vedic astrology)
+  :ayanamsa :lahiri
+  :ayanamsa-value 24.15  ; Approximate degrees (as of 2025)
+  
+  ;; Tropical zodiac for houses, sidereal for nakshatras
+  :zodiac :tropical
+  :nakshatra-system :sidereal
+  
+  ;; Whole sign houses (each house = one sign)
+  :house-system :whole-sign}
+ 
+ :api
+ {:provider :swiss-ephemeris
+  :mode :local
+  
+  ;; Swiss Ephemeris data files location
+  :ephemeris-path "/usr/share/swisseph"
+  
+  ;; Fallback to online calculation if local files unavailable
+  :fallback :astro-seek
+  
+  ;; Cache settings
+  :cache-enabled true
+  :cache-ttl-hours 24}
+ 
+ :author "kae3g"}
